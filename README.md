@@ -2493,4 +2493,9 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 4. Whenever state/props changes, the component will re-render
 5. Convention is to add Handler at the end of method that is a event handler
 6. List of supported events for writing handlers - https://reactjs.org/docs/events.html#supported-events
-7.
+7. React hooks can be used only in functional components
+8. When using react hooks (starts with useBlaBla, eg useState), we have to include all state data when modifying state
+9. stateful and stateless components
+10. better to have way more functional presentation (stateless components)
+-> stateless, dumb, functional presentation components
+-> container, stateful or smart component
