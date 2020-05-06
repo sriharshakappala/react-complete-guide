@@ -2492,3 +2492,5 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 3. React hooks
 4. Whenever state/props changes, the component will re-render
 5. Convention is to add Handler at the end of method that is a event handler
+6. List of supported events for writing handlers - https://reactjs.org/docs/events.html#supported-events
+7.
