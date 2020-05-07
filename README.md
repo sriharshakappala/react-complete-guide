@@ -2501,3 +2501,4 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 -> container, stateful or smart component
 11. Bind syntax is much preferable way
 12. stylesheets are global
+13. Cant access state in functional components
