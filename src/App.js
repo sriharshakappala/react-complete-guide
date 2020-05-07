@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
 
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
+
 class App extends Component {
   state = {
     persons: [
@@ -58,6 +61,11 @@ class App extends Component {
           My hobbies are : Gaming
         </Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+
+        <UserInput />
+        <UserOutput userName='Max'/>
+        <UserOutput userName='Mini'/>
+        <UserOutput userName='Stephanie'/>
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
