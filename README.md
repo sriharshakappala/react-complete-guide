@@ -2500,3 +2500,4 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 -> stateless, dumb, functional presentation components
 -> container, stateful or smart component
 11. Bind syntax is much preferable way
+12. stylesheets are global
