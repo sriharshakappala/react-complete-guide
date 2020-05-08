@@ -76,6 +76,10 @@ class App extends Component {
             My hobbies are : Gaming
           </Person>
           <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+
+          {this.state.persons.map(person => {
+            return <Person name={person.name} age={person.age} />
+          })}
         </div>
       )
     }
