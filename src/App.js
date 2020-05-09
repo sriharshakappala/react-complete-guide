@@ -10,6 +10,22 @@ import Char from './Char/Char';
 
 // import Radium, {StyleRoot} from 'radium'
 
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  background-color: green;
+  color: white;
+  font: inherit;
+  border: 1px solid blue;
+  padding: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+`;
+
 class App extends Component {
   state = {
     persons: [
@@ -147,7 +163,9 @@ class App extends Component {
         <h1>Hi, this is react app</h1>
         <p className={classes.join(' ')}>Classes Dynamic Demo</p>
         {/* <button style={style} onClick={() => this.switchNameHandler('Maximilian')}>Switch Name</button> */}
-        <button style={style} onClick={this.togglePersonsHandler}>Toggle Persons</button>
+        <StyledButton onClick={this.togglePersonsHandler}>
+          Toggle Persons
+        </StyledButton>
         { persons }
 
         <UserInput changed={this.userNameChangedHandler} currentName={this.state.username} />
