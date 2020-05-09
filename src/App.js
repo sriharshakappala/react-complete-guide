@@ -13,7 +13,7 @@ import Char from './Char/Char';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background-color: green;
+  background-color: ${props => props.alt ? 'red' : 'green'};
   color: white;
   font: inherit;
   border: 1px solid blue;
@@ -21,7 +21,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: lightgreen;
+    background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
     color: black;
   }
 `;
@@ -163,7 +163,7 @@ class App extends Component {
         <h1>Hi, this is react app</h1>
         <p className={classes.join(' ')}>Classes Dynamic Demo</p>
         {/* <button style={style} onClick={() => this.switchNameHandler('Maximilian')}>Switch Name</button> */}
-        <StyledButton onClick={this.togglePersonsHandler}>
+        <StyledButton alt={this.state.showPersons} onClick={this.togglePersonsHandler}>
           Toggle Persons
         </StyledButton>
         { persons }
