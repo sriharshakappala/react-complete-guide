@@ -2504,3 +2504,4 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 13. Cant access state in functional components
 14. Reconcilation and Diffing
 15. Create variables rather than using terenary expressions
+16. Pseudo selectors css
