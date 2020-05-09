@@ -163,9 +163,9 @@ class App extends Component {
         <h1>Hi, this is react app</h1>
         <p className={classes.join(' ')}>Classes Dynamic Demo</p>
         {/* <button style={style} onClick={() => this.switchNameHandler('Maximilian')}>Switch Name</button> */}
-        <StyledButton alt={this.state.showPersons} onClick={this.togglePersonsHandler}>
+        <button onClick={this.togglePersonsHandler}>
           Toggle Persons
-        </StyledButton>
+        </button>
         { persons }
 
         <UserInput changed={this.userNameChangedHandler} currentName={this.state.username} />

@@ -2509,3 +2509,4 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 18. Higher Order Component
 19. Styled Componenets
 20. Tagged Templates (`` at the end of code)
+21. CSS Modules for selectively applying styles to certain componenets
