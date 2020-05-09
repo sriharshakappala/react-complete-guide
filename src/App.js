@@ -8,7 +8,7 @@ import UserOutput from './UserOutput/UserOutput';
 import Validation from './Validation/Validation';
 import Char from './Char/Char';
 
-import Radium, {StyleRoot} from 'radium'
+// import Radium, {StyleRoot} from 'radium'
 
 class App extends Component {
   state = {
@@ -143,30 +143,28 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
-        <div className="App">
-          <h1>Hi, this is react app</h1>
-          <p className={classes.join(' ')}>Classes Dynamic Demo</p>
-          {/* <button style={style} onClick={() => this.switchNameHandler('Maximilian')}>Switch Name</button> */}
-          <button style={style} onClick={this.togglePersonsHandler}>Toggle Persons</button>
-          { persons }
+      <div className="App">
+        <h1>Hi, this is react app</h1>
+        <p className={classes.join(' ')}>Classes Dynamic Demo</p>
+        {/* <button style={style} onClick={() => this.switchNameHandler('Maximilian')}>Switch Name</button> */}
+        <button style={style} onClick={this.togglePersonsHandler}>Toggle Persons</button>
+        { persons }
 
-          <UserInput changed={this.userNameChangedHandler} currentName={this.state.username} />
-          <UserOutput userName={this.state.username}/>
-          <UserOutput userName='Mini'/>
-          <UserOutput userName='Stephanie'/>
+        <UserInput changed={this.userNameChangedHandler} currentName={this.state.username} />
+        <UserOutput userName={this.state.username}/>
+        <UserOutput userName='Mini'/>
+        <UserOutput userName='Stephanie'/>
 
-          {/* Assignment 2 */}
-          <h2>Assignment 2</h2>
-          <input type='text' onChange={this.inputChangedHandler} value={this.state.userInput} />
-          <p>{this.state.userInput}</p>
-          <Validation inputLength={this.state.userInput.length} />
-          {charList}
-        </div>
-      </StyleRoot>
+        {/* Assignment 2 */}
+        <h2>Assignment 2</h2>
+        <input type='text' onChange={this.inputChangedHandler} value={this.state.userInput} />
+        <p>{this.state.userInput}</p>
+        <Validation inputLength={this.state.userInput.length} />
+        {charList}
+      </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
 
-export default Radium(App);
+export default App;
