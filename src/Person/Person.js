@@ -1,6 +1,7 @@
 import React from 'react';
 import './Person.css';
-import Radium from 'radium'
+import Radium from 'radium';
+import Test from '../Test/Test';
 
 const person = (props) => {
   const style = {
@@ -13,6 +14,7 @@ const person = (props) => {
       <p onClick={props.click}>I'm a {props.name} and I am {props.age} years old</p>
       <p>{props.children}</p>
       <input type='text' onChange={props.changed} value={props.name} />
+      <Test xname={props.name + 'Child'} />
     </div>
   )
 }

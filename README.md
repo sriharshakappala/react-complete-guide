@@ -2507,3 +2507,4 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 16. Pseudo selectors css
 17. Radium is package - for adding pseudo selectors and media queries for inline styles
 18. Higher Order Component
+19. Styled Componenets
