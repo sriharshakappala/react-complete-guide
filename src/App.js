@@ -5,6 +5,9 @@ import Person from './Person/Person';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 
+import Validation from './Validation/Validation';
+import Char from './Char/Char';
+
 class App extends Component {
   state = {
     persons: [
@@ -15,6 +18,7 @@ class App extends Component {
     otherState: 'someValue',
     username: 'SuperMax',
     showPersons: false,
+    userInput: '',
   }
 
   userNameChangedHandler = (event) => {
@@ -72,6 +76,17 @@ class App extends Component {
     this.setState({persons: persons});
   }
 
+  inputChangedHandler = (event) => {
+    this.setState({userInput: event.target.value});
+  }
+
+  deleteCharHandler = (index) => {
+    const text = this.state.userInput.split('');
+    text.splice(index, 1);
+    const updatedText = text.join('');
+    this.setState({userInput: updatedText});
+  }
+
   render() {
     const style = {
       backgroundColor: 'white',
@@ -81,6 +96,9 @@ class App extends Component {
       cursor: 'pointer'
     };
     let persons = null;
+    const charList = this.state.userInput.split('').map((c, index) => {
+      return <Char character={c} key={index} clicked={() => this.deleteCharHandler(index)} />
+    })
     if (this.state.showPersons) {
       persons = (
         <div>
@@ -114,6 +132,13 @@ class App extends Component {
         <UserOutput userName={this.state.username}/>
         <UserOutput userName='Mini'/>
         <UserOutput userName='Stephanie'/>
+
+        {/* Assignment 2 */}
+        <h2>Assignment 2</h2>
+        <input type='text' onChange={this.inputChangedHandler} value={this.state.userInput} />
+        <p>{this.state.userInput}</p>
+        <Validation inputLength={this.state.userInput.length} />
+        {charList}
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
