@@ -2502,3 +2502,5 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 11. Bind syntax is much preferable way
 12. stylesheets are global
 13. Cant access state in functional components
+14. Reconcilation and Diffing
+15. Create variables rather than using terenary expressions
