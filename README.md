@@ -2510,3 +2510,12 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 19. Styled Componenets
 20. Tagged Templates (`` at the end of code)
 21. CSS Modules for selectively applying styles to certain componenets
+22. Use extension .module.css
+23. https://github.com/css-modules/css-modules - CSS Modules
+24. https://medium.com/nulogy/how-to-use-css-modules-with-create-react-app-9e44bec2b5c2
+25. Source Maps -> Debugging -> Go to Inspect -> Source
+26. React developer tools
+27. Error Boundaries - ErrorBoundary is a higher order componenet. It's goal is to catch errors in a componenet that's wrapped inside of it.
+-- https://reactjs.org/docs/error-boundaries.html
+-- https://developers.google.com/web/tools/chrome-devtools/javascript/
+28.
