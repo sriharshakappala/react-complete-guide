@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Person.css';
-import Test from '../Test/Test';
+import Test from '../../../components/Test/Test';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
@@ -23,9 +23,9 @@ const person = (props) => {
     }
   };
   const rnd = Math.random();
-  if (rnd > 0.7) {
-    throw new Error('something went wrong!!!');
-  }
+  // if (rnd > 0.7) {
+  //   throw new Error('something went wrong!!!');
+  // }
   return(
     // <div className='Person' style={style}>
     <StyledDiv>
