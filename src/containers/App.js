@@ -28,17 +28,39 @@ const StyledButton = styled.button`
 `;
 
 class App extends Component {
-  state = {
-    persons: [
-      { id: '1', name: 'Max', age: '28' },
-      { id: '2', name: 'Mini', age: '26' },
-      { id: '3', name: 'Stephanie', age: '24' }
-    ],
-    otherState: 'someValue',
-    username: 'SuperMax',
-    showPersons: false,
-    userInput: '',
+
+  constructor(props) {
+    super(props);
+    console.log('[App.js] Constructor');
+    this.state = {
+      persons: [
+        { id: '1', name: 'Max', age: '28' },
+        { id: '2', name: 'Mini', age: '26' },
+        { id: '3', name: 'Stephanie', age: '24' }
+      ],
+      otherState: 'someValue',
+      username: 'SuperMax',
+      showPersons: false,
+      userInput: '',
+    }
   }
+
+  static getDerivedStateFromProps(props, state) {
+    console.log('[App.js] getDerivedStateFromProps', props);
+    return state;
+  }
+
+  // state = {
+  //   persons: [
+  //     { id: '1', name: 'Max', age: '28' },
+  //     { id: '2', name: 'Mini', age: '26' },
+  //     { id: '3', name: 'Stephanie', age: '24' }
+  //   ],
+  //   otherState: 'someValue',
+  //   username: 'SuperMax',
+  //   showPersons: false,
+  //   userInput: '',
+  // }
 
   userNameChangedHandler = (event) => {
     this.setState({
@@ -106,7 +128,12 @@ class App extends Component {
     this.setState({userInput: updatedText});
   }
 
+  componentDidMount() {
+    console.log('[App.js] componenetDidMount');
+  }
+
   render() {
+    console.log('[App.js] render');
     const style = {
       backgroundColor: 'green',
       color: 'white',

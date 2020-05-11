@@ -2518,9 +2518,17 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 27. Error Boundaries - ErrorBoundary is a higher order componenet. It's goal is to catch errors in a componenet that's wrapped inside of it.
 -- https://reactjs.org/docs/error-boundaries.html
 -- https://developers.google.com/web/tools/chrome-devtools/javascript/
-28. Component Lifecycle - only in class based componenets
+28. Component Lifecycle (create) - only in class based componenets
 -> constructor(props) - setting state
 -> getDerivedStateFromProps(props, state) - sync state
 -> render() - prepare and structure JSX code
 -> Render child componenets
 -> componenetDidMount() - we can cause side effects in this method, typical hook to use to call HTTP requests
+29. Component lifecycle (update)
+-> getDerivedStateFromProps(props, state) - sync state
+-> shouldComponentUpdate(nextProps, nextState) -> decide whether to update or not
+-> render()
+-> Update child components
+-> getSnapshotBeforeUpdate(prevProps, prevState)
+-> componentDidUpdate() -> can cause side effects, HTTP request (triggers re-render)
+30.
