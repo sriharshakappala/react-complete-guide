@@ -162,6 +162,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1>{this.props.appTitle}</h1>
         <h1>Hi, this is react app</h1>
         <p className={classes.join(' ')}>Classes Dynamic Demo</p>
         {/* <button style={style} onClick={() => this.switchNameHandler('Maximilian')}>Switch Name</button> */}
