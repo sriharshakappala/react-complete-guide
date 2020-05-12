@@ -2531,4 +2531,16 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 -> Update child components
 -> getSnapshotBeforeUpdate(prevProps, prevState)
 -> componentDidUpdate() -> can cause side effects, HTTP request (triggers re-render)
-30.
+<!-- For State -->
+componentDidMount()
+componenetDidUpdate(nextProps, nextState)
+30. useEffect() in functional componenets -> react hook
+(useEffect will run for every render cycle)
+-> combines componentDidMount and componenetDidUpdate
+31. componentwillUnmount
+32. Paint flashing in chrome - Highlights rerendered/repainted part in green
+33. shouldComponentUpdate -> for optimizing in class based components
+34. React.memo() -> for optimizing in functional componenets -> memo is for memoize
+35. PureComponent -> extend PureComponent
+-> what id does? - it implements Component and already implemented shouldComponentUpdate with comparing all the props whether they have changed
+36.
