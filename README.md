@@ -2543,4 +2543,12 @@ componenetDidUpdate(nextProps, nextState)
 34. React.memo() -> for optimizing in functional componenets -> memo is for memoize
 35. PureComponent -> extend PureComponent
 -> what id does? - it implements Component and already implemented shouldComponentUpdate with comparing all the props whether they have changed
-36.
+36. Usually we can't render adjacent elements in react render method. That's why we enclose them in a parent div.
+But what if we want to?????
+37. Solution for 36 is HOC - Higher Order Component (Auxillary)
+```js
+import React, { Component } from 'react';
+const aux = props => props.children;
+export default aux
+```
+and wrap with <Aux></Aux>
