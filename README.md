@@ -2552,3 +2552,39 @@ const aux = props => props.children;
 export default aux
 ```
 and wrap with <Aux></Aux>
+38. From react 16, the problem mentioned in 36 is addressed. Similar to Aux componenet, there is a default one which is mentioned below
+```js
+<React.Fragment></React.Fragment>
+```
+39. HOC - it just wraps another component
+HOC's better practice to name it with prefix of With (WithClass.js)
+40. this.setState wont execute synchronously
+41. If we want to setState and it depends on old state, it's recommended to do it in below way,
+```js
+this.setState((prevState, props) => {
+  return {
+    persons: persons.
+    changeCounter: prevState.changeCounter + 1
+  }
+});
+```
+42. Using prop types when distributing our component as package to word via npm so no one would misuse the componenet
+```
+npm install --save prop-types
+```
+```js
+import PropTypes from 'prop-types'
+Person.propTypes = {
+  click: PropTypes.func,
+  age: PropTypes.number,
+  name: PropTypes.string
+}
+```
+43. Ref - References (to setup focus on a specific input element)
+```js
+ref={(inputEl) => {this.inputElement = inputEl}}
+componentDidMount() {
+  this.inputElement.focus()
+}
+```
+44.
