@@ -2587,4 +2587,13 @@ componentDidMount() {
   this.inputElement.focus()
 }
 ```
-44.
+44. useRef in functional components
+45. Context - Useful when we need certain data / certain state in multiple components and we dont want to pass it through multiple components
+46. Context API
+-- Best practice to create a folder for all context related stuff
+```js
+const authContext = React.createContext();
+```
+Context component can be wrapped around the componenets where the context is needed
+AuthContext.Provider
+AuthContext.Consumer
